@@ -3,10 +3,14 @@
 from __future__ import annotations
 
 from collections import Counter
+from pathlib import Path
 
+from code_switch_failure_map.data.load import dumpable_records, load_dataset
+from code_switch_failure_map.data.split import GoldenSelectionResult, select_golden_set
 from code_switch_failure_map.data.validate import normalized_text_key
 from code_switch_failure_map.schemas.sample import SampleRecord
 from code_switch_failure_map.schemas.taxonomy import SliceTag
+from code_switch_failure_map.utils.io import write_jsonl
 
 
 def select_candidates_by_slice(records: list[SampleRecord], required_tags: set[SliceTag]) -> list[SampleRecord]:
@@ -64,3 +68,27 @@ def identify_low_diversity_samples(records: list[SampleRecord], min_group_size: 
         grouped.setdefault(key, []).append(record.sample_id)
 
     return {key: ids for key, ids in grouped.items() if len(ids) >= min_group_size}
+
+
+def build_golden_files(
+    source_path: str | Path = "data/raw/seed_hinglish_samples.jsonl",
+    candidates_path: str | Path = "data/golden/golden_candidates.jsonl",
+    golden_set_path: str | Path = "data/golden/golden_set_v1.jsonl",
+    golden_size: int = 50,
+) -> GoldenSelectionResult:
+    """Build deterministic golden candidate + final set files and print a concise summary."""
+    records = load_dataset(source_path)
+    result = select_golden_set(records, size=golden_size)
+
+    write_jsonl(candidates_path, dumpable_records(result.candidates))
+    write_jsonl(golden_set_path, dumpable_records(result.golden_set))
+
+    print(f"golden set summary: size={len(result.golden_set)} candidates={len(result.candidates)}")
+    print(f"intent distribution: {result.intent_distribution}")
+    print(f"slice distribution: {result.slice_distribution}")
+    if result.imbalance_warnings:
+        print(f"imbalance warnings: {result.imbalance_warnings}")
+    else:
+        print("imbalance warnings: none")
+
+    return result

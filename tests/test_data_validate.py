@@ -9,7 +9,7 @@ from pydantic import ValidationError
 
 from code_switch_failure_map.data.curate import count_by_slice, export_subset_by_ids
 from code_switch_failure_map.data.load import load_dataset
-from code_switch_failure_map.data.split import split_records
+from code_switch_failure_map.data.split import select_golden_set, split_records
 from code_switch_failure_map.data.validate import assert_valid_records, validate_records
 from code_switch_failure_map.schemas.sample import MetadataFlags, SampleRecord
 from code_switch_failure_map.schemas.taxonomy import PromptLanguage, SliceTag, SourceSplit
@@ -115,3 +115,35 @@ def test_deterministic_split_behavior() -> None:
 
     assert [record.sample_id for record in curated_a] == [record.sample_id for record in curated_b]
     assert [record.sample_id for record in golden_a] == [record.sample_id for record in golden_b]
+
+
+def test_golden_selection_is_deterministic_and_size_bound() -> None:
+    records = load_dataset("data/raw/seed_hinglish_samples.jsonl")
+
+    first = select_golden_set(records, size=50)
+    second = select_golden_set(records, size=50)
+
+    first_ids = [record.sample_id for record in first.golden_set]
+    second_ids = [record.sample_id for record in second.golden_set]
+
+    assert len(first_ids) == 50
+    assert first_ids == second_ids
+
+
+def test_golden_selection_has_no_duplicate_ids() -> None:
+    records = load_dataset("data/raw/seed_hinglish_samples.jsonl")
+    selected = select_golden_set(records, size=50).golden_set
+
+    ids = [record.sample_id for record in selected]
+    assert len(ids) == len(set(ids))
+
+
+def test_golden_selection_meets_minimum_diversity() -> None:
+    records = load_dataset("data/raw/seed_hinglish_samples.jsonl")
+    result = select_golden_set(records, size=50)
+
+    assert len(result.intent_distribution) >= 8
+    assert max(result.intent_distribution.values()) <= 8
+    assert result.slice_distribution.get(SliceTag.ADVERSARIAL.value, 0) >= 10
+    assert result.slice_distribution.get(SliceTag.AMBIGUITY.value, 0) >= 10
+    assert result.slice_distribution.get(SliceTag.TEMPORAL_REFERENCE.value, 0) >= 10
