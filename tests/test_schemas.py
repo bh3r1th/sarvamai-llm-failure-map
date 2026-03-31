@@ -9,7 +9,7 @@ from pydantic import ValidationError
 
 from code_switch_failure_map.config import ExperimentConfig, ModelConfig
 from code_switch_failure_map.schemas.evaluation import EvaluationResult
-from code_switch_failure_map.schemas.prediction import ParsedPrediction, PredictionRecord, TokenCounts
+from code_switch_failure_map.schemas.prediction import ParsedPrediction, PredictionRecord
 from code_switch_failure_map.schemas.sample import EntityMention, MetadataFlags, SampleRecord
 from code_switch_failure_map.schemas.taxonomy import (
     EntityType,
@@ -48,12 +48,16 @@ def test_valid_intent_and_entity_creation() -> None:
 
     prediction = PredictionRecord(
         sample_id="s1",
-        prompt_variant="baseline_v1",
         model_name="demo-model",
-        raw_model_response='{"intent": "call_request"}',
-        parsed_prediction=ParsedPrediction(intent=IntentLabel.CALL_REQUEST, entities=[]),
+        prompt_language=PromptLanguage.HINGLISH,
+        prompt_text="prompt",
+        raw_response='{"intent": "call_request", "entities": []}',
+        parsed_prediction=ParsedPrediction(intent="call_request", entities=[]),
         parse_success=True,
-        token_counts=TokenCounts(input_tokens=10, output_tokens=5, total_tokens=15),
+        schema_failure=False,
+        input_tokens=10,
+        output_tokens=5,
+        total_tokens=15,
     )
 
     evaluation = EvaluationResult(
@@ -104,16 +108,27 @@ def test_required_field_enforcement() -> None:
     with pytest.raises(ValidationError):
         PredictionRecord(
             sample_id="s1",
-            prompt_variant="v1",
             model_name="demo-model",
-            raw_model_response="{bad json}",
+            prompt_language=PromptLanguage.ENGLISH,
+            prompt_text="prompt",
+            raw_response="{bad json}",
             parse_success=True,
+            schema_failure=False,
         )
 
 
-def test_token_count_sanity() -> None:
+def test_parse_success_schema_failure_consistency() -> None:
     with pytest.raises(ValidationError):
-        TokenCounts(input_tokens=7, output_tokens=2, total_tokens=20)
+        PredictionRecord(
+            sample_id="s1",
+            model_name="demo-model",
+            prompt_language=PromptLanguage.ENGLISH,
+            prompt_text="prompt",
+            raw_response='{"intent": null, "entities": []}',
+            parse_success=True,
+            schema_failure=True,
+            parsed_prediction=ParsedPrediction(intent=None, entities=[]),
+        )
 
 
 def test_failure_category_parsing() -> None:

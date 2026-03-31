@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
-"""Script scaffold for `run_models.py`."""
+"""Run one configured model over one dataset and write predictions JSONL."""
 
-# TODO: Implement script entrypoint by delegating into package modules.
+from __future__ import annotations
+
+from code_switch_failure_map.cli import app
+
+
+if __name__ == "__main__":
+    app()
