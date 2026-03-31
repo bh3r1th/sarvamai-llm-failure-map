@@ -21,10 +21,10 @@ def _base_record(sample_id: str = "s1") -> SampleRecord:
         source_split=SourceSplit.RAW,
         text="kal ka weather kya hai?",
         normalized_text="kal ka weather kya hai?",
-        gold_intent="weather_query",
-        gold_entities={"date": "kal"},
+        gold_intent="information_query",
+        gold_entities=[],
         metadata_flags=MetadataFlags(code_switching=True),
-        slice_tags={SliceTag.CODE_SWITCHING, SliceTag.PROMPT_LANGUAGE},
+        slice_tags={SliceTag.CODE_SWITCHING, SliceTag.PROMPT_LANGUAGE_HINGLISH},
         prompt_variant="baseline_v1",
         prompt_language=PromptLanguage.HINGLISH,
     )

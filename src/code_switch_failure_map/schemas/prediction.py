@@ -7,6 +7,7 @@ from typing import Annotated
 from pydantic import BaseModel, ConfigDict, Field, StringConstraints, model_validator
 
 from code_switch_failure_map.schemas.sample import EntityMention
+from code_switch_failure_map.schemas.taxonomy import IntentLabel
 
 
 class TokenCounts(BaseModel):
@@ -35,8 +36,8 @@ class ParsedPrediction(BaseModel):
 
     model_config = ConfigDict(extra="forbid")
 
-    intent: Annotated[str, StringConstraints(min_length=1, strip_whitespace=True)]
-    entities: list[EntityMention] | dict[str, str | list[str]] = Field(default_factory=list)
+    intent: IntentLabel
+    entities: list[EntityMention] = Field(default_factory=list)
 
 
 class PredictionRecord(BaseModel):
