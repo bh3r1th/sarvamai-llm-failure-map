@@ -18,20 +18,8 @@ class ValidationIssue:
     message: str
 
 
-def _entities_valid(entities: list[EntityMention] | dict[str, str | list[str]]) -> bool:
-    if isinstance(entities, list):
-        return all(isinstance(entity, EntityMention) for entity in entities)
-
-    if not isinstance(entities, dict):
-        return False
-
-    for value in entities.values():
-        if isinstance(value, str):
-            continue
-        if isinstance(value, list) and all(isinstance(item, str) for item in value):
-            continue
-        return False
-    return True
+def _entities_valid(entities: list[EntityMention]) -> bool:
+    return all(isinstance(entity, EntityMention) for entity in entities)
 
 
 def validate_records(records: list[SampleRecord], allowed_prompt_variants: set[str] | None = None) -> list[ValidationIssue]:

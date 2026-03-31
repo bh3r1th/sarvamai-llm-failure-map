@@ -6,9 +6,14 @@ from typing import Annotated
 
 from pydantic import BaseModel, ConfigDict, Field, StringConstraints, model_validator
 
-from code_switch_failure_map.schemas.taxonomy import PromptLanguage, SliceTag, SourceSplit
+from code_switch_failure_map.schemas.taxonomy import (
+    EntityType,
+    IntentLabel,
+    PromptLanguage,
+    SliceTag,
+    SourceSplit,
+)
 
-IntentLabel = Annotated[str, StringConstraints(min_length=1, strip_whitespace=True)]
 SampleText = Annotated[str, StringConstraints(min_length=1)]
 
 
@@ -17,15 +22,23 @@ class EntityMention(BaseModel):
 
     model_config = ConfigDict(extra="forbid", frozen=True)
 
-    label: Annotated[str, StringConstraints(min_length=1, strip_whitespace=True)]
-    value: Annotated[str, StringConstraints(min_length=1)]
+    type: EntityType
+    text: Annotated[str, StringConstraints(min_length=1)]
+    normalized_value: str | None = None
+    confidence: float | None = Field(default=None, ge=0.0, le=1.0)
     start_char: int | None = Field(default=None, ge=0)
     end_char: int | None = Field(default=None, gt=0)
 
     @model_validator(mode="after")
     def validate_offsets(self) -> "EntityMention":
-        if self.start_char is not None and self.end_char is not None and self.end_char <= self.start_char:
-            raise ValueError("end_char must be greater than start_char when both offsets are provided")
+        has_start = self.start_char is not None
+        has_end = self.end_char is not None
+
+        if has_start != has_end:
+            raise ValueError("start_char and end_char must both be provided when spans are used")
+
+        if has_start and has_end and self.end_char <= self.start_char:
+            raise ValueError("end_char must be greater than start_char when offsets are provided")
         return self
 
 
@@ -49,7 +62,7 @@ class SampleRecord(BaseModel):
     text: SampleText
     normalized_text: str | None = None
     gold_intent: IntentLabel
-    gold_entities: list[EntityMention] | dict[str, str | list[str]]
+    gold_entities: list[EntityMention] = Field(default_factory=list)
     metadata_flags: MetadataFlags = Field(default_factory=MetadataFlags)
     slice_tags: set[SliceTag] = Field(default_factory=set)
     prompt_variant: Annotated[str, StringConstraints(min_length=1, strip_whitespace=True)]
@@ -66,7 +79,20 @@ class SampleRecord(BaseModel):
             if is_enabled and tag not in self.slice_tags:
                 raise ValueError(f"slice_tags must include '{tag.value}' when corresponding metadata flag is true")
 
-        if SliceTag.PROMPT_LANGUAGE not in self.slice_tags:
-            raise ValueError("slice_tags must include 'prompt_language'")
+        expected_prompt_tag = {
+            PromptLanguage.ENGLISH: SliceTag.PROMPT_LANGUAGE_EN,
+            PromptLanguage.HINGLISH: SliceTag.PROMPT_LANGUAGE_HINGLISH,
+        }[self.prompt_language]
+
+        if expected_prompt_tag not in self.slice_tags:
+            raise ValueError(f"slice_tags must include '{expected_prompt_tag.value}'")
+
+        incompatible_prompt_tag = {
+            PromptLanguage.ENGLISH: SliceTag.PROMPT_LANGUAGE_HINGLISH,
+            PromptLanguage.HINGLISH: SliceTag.PROMPT_LANGUAGE_EN,
+        }[self.prompt_language]
+
+        if incompatible_prompt_tag in self.slice_tags:
+            raise ValueError(f"slice_tags cannot include '{incompatible_prompt_tag.value}' for this prompt_language")
 
         return self
