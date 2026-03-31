@@ -1,0 +1,54 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Test and tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# IDE/editor files
+.vscode/
+.idea/
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment files
+.env
+.env.*
+
+# Project artifacts
+/data/*
+!/data/raw/
+!/data/curated/
+!/data/golden/
+!/data/predictions/
+!/data/reports/
+!/data/raw/.gitkeep
+!/data/curated/.gitkeep
+!/data/golden/.gitkeep
+!/data/predictions/.gitkeep
+!/data/reports/.gitkeep
+
+/outputs/*
+!/outputs/metrics/
+!/outputs/failures/
+!/outputs/comparisons/
+!/outputs/metrics/.gitkeep
+!/outputs/failures/.gitkeep
+!/outputs/comparisons/.gitkeep
