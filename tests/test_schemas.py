@@ -1,7 +1,116 @@
-"""Placeholder tests for test_schemas.py."""
+"""Schema validation tests for foundational typed surfaces."""
+
+from __future__ import annotations
+
+from pathlib import Path
+
+import pytest
+from pydantic import ValidationError
+
+from code_switch_failure_map.config import ExperimentConfig, ModelConfig
+from code_switch_failure_map.schemas.evaluation import EvaluationResult
+from code_switch_failure_map.schemas.prediction import ParsedPrediction, PredictionRecord, TokenCounts
+from code_switch_failure_map.schemas.sample import EntityMention, MetadataFlags, SampleRecord
+from code_switch_failure_map.schemas.taxonomy import FailureCategory, PromptLanguage, SliceTag, SourceSplit
+from code_switch_failure_map.utils.paths import build_experiment_paths
 
 
-def test_placeholder() -> None:
-    """Ensure the scaffolded test module is discovered."""
-    # TODO: Replace with module-specific behavioral tests.
-    assert True
+def test_valid_schema_creation() -> None:
+    sample = SampleRecord(
+        sample_id="s1",
+        source_split=SourceSplit.GOLDEN,
+        text="kal ka weather kaisa hai?",
+        normalized_text="kal ka weather kaisa hai?",
+        gold_intent="weather_query",
+        gold_entities=[EntityMention(label="date", value="kal")],
+        metadata_flags=MetadataFlags(code_switching=True),
+        slice_tags={SliceTag.CODE_SWITCHING, SliceTag.PROMPT_LANGUAGE},
+        prompt_variant="baseline_v1",
+        prompt_language=PromptLanguage.HINGLISH,
+    )
+
+    prediction = PredictionRecord(
+        sample_id="s1",
+        prompt_variant="baseline_v1",
+        model_name="demo-model",
+        raw_model_response='{"intent": "weather_query"}',
+        parsed_prediction=ParsedPrediction(intent="weather_query", entities=[]),
+        parse_success=True,
+        token_counts=TokenCounts(input_tokens=10, output_tokens=5, total_tokens=15),
+    )
+
+    evaluation = EvaluationResult(
+        sample_id="s1",
+        intent_exact_match=True,
+        entities_exact_match=True,
+        overall_exact_match=True,
+        failure_categories=set(),
+    )
+
+    cfg = ExperimentConfig.from_repo_root(
+        experiment_name="hinglish-baseline",
+        repo_root=Path("/tmp/repo"),
+        models=[
+            ModelConfig(
+                model_name="demo-model",
+                prompt_variant="baseline_v1",
+                prompt_language=PromptLanguage.HINGLISH,
+            )
+        ],
+    )
+
+    assert sample.sample_id == "s1"
+    assert prediction.parse_success is True
+    assert evaluation.overall_exact_match is True
+    assert cfg.paths.data_golden == Path("/tmp/repo/data/golden")
+
+
+def test_invalid_enum_rejection() -> None:
+    with pytest.raises(ValidationError):
+        SampleRecord(
+            sample_id="s1",
+            source_split="bad_split",
+            text="text",
+            gold_intent="intent",
+            gold_entities=[],
+            metadata_flags=MetadataFlags(),
+            slice_tags={SliceTag.PROMPT_LANGUAGE},
+            prompt_variant="v1",
+            prompt_language=PromptLanguage.HINGLISH,
+        )
+
+
+def test_required_field_enforcement() -> None:
+    with pytest.raises(ValidationError):
+        PredictionRecord(
+            sample_id="s1",
+            prompt_variant="v1",
+            model_name="demo-model",
+            raw_model_response="{bad json}",
+            parse_success=True,
+        )
+
+
+def test_token_count_sanity() -> None:
+    with pytest.raises(ValidationError):
+        TokenCounts(input_tokens=7, output_tokens=2, total_tokens=20)
+
+
+def test_failure_category_parsing() -> None:
+    result = EvaluationResult(
+        sample_id="s3",
+        intent_exact_match=False,
+        entities_exact_match=False,
+        overall_exact_match=False,
+        failure_categories=["schema_failure", FailureCategory.ENTITY_DRIFT],
+    )
+
+    assert FailureCategory.SCHEMA_FAILURE in result.failure_categories
+    assert FailureCategory.ENTITY_DRIFT in result.failure_categories
+
+
+def test_paths_surface() -> None:
+    paths = build_experiment_paths(Path("/repo"))
+
+    assert paths.data_raw == Path("/repo/data/raw")
+    assert paths.outputs_comparisons == Path("/repo/outputs/comparisons")
