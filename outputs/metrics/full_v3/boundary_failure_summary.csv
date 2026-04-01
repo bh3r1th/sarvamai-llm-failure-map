@@ -1,0 +1,10 @@
+boundary_failure_category,samples,rate
+exact_entities_only,2,0.002777777777777778
+exact_intent_only,286,0.3972222222222222
+full_exact_match,76,0.10555555555555556
+intent_correct_entity_drift,66,0.09166666666666666
+intent_correct_entity_extra,16,0.022222222222222223
+intent_correct_entity_missing,98,0.1361111111111111
+intent_wrong_entity_partially_correct,29,0.04027777777777778
+intent_wrong_no_entity_match,80,0.1111111111111111
+null_or_unparsed_prediction,67,0.09305555555555556

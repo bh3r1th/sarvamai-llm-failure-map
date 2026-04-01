@@ -18,8 +18,10 @@ def test_prompt_render_english_and_hinglish() -> None:
         expected_output_schema_description='{"intent": "string|null", "entities": []}',
     )
 
-    assert "Extract the user's intent" in english
-    assert "Aap ek information extraction system ho" in hinglish
+    assert "Extract the user's intent and entities" in english
+    assert "Input text se user ka intent aur entities extract karo" in hinglish
+    assert "book me a cab" in english
+    assert "mere liye cab book karo" in hinglish
 
 
 def test_prompt_render_includes_strict_json_contract_wording() -> None:
@@ -29,8 +31,25 @@ def test_prompt_render_includes_strict_json_contract_wording() -> None:
         expected_output_schema_description='{"intent": "string|null", "entities": []}',
     )
 
-    assert "strict JSON" in rendered
-    assert "intent" in rendered
-    assert "entities" in rendered
-    assert "null" in rendered
-    assert "no extra prose" in rendered
+    assert "Return ONLY a valid JSON object" in rendered
+    assert "Allowed intents" in rendered
+    assert "Do NOT include any explanation" in rendered
+    assert "First character of response must be '{'" in rendered
+    assert "Do NOT create new intent labels" in rendered
+    assert "- reminder_create" in rendered
+    assert "- purchase_request" in rendered
+    assert "- other" in rendered
+
+
+def test_prompt_render_lists_allowed_entity_labels_and_has_no_extra_padding() -> None:
+    rendered = render_extraction_prompt(
+        text="kal mom ko call karna",
+        prompt_language=PromptLanguage.HINGLISH,
+    )
+
+    assert rendered.startswith("Input text se user ka intent aur entities extract karo.")
+    assert "Allowed entity labels" in rendered
+    assert "- time" in rendered
+    assert "- destination" in rendered
+    assert "- other" in rendered
+    assert "Start directly with JSON." in rendered

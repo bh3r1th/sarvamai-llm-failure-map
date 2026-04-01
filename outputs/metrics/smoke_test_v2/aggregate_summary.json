@@ -1,0 +1,716 @@
+{
+  "aggregate_tables": {
+    "by_failure_bucket": [
+      {
+        "failure_bucket": "entity_drift",
+        "rate": 0.0625,
+        "samples": 5
+      },
+      {
+        "failure_bucket": "hallucination",
+        "rate": 0.525,
+        "samples": 42
+      },
+      {
+        "failure_bucket": "intent_confusion",
+        "rate": 0.225,
+        "samples": 18
+      },
+      {
+        "failure_bucket": "omission",
+        "rate": 0.7375,
+        "samples": 59
+      },
+      {
+        "failure_bucket": "over_extraction",
+        "rate": 0.5625,
+        "samples": 45
+      },
+      {
+        "failure_bucket": "schema_failure",
+        "rate": 0.1625,
+        "samples": 13
+      },
+      {
+        "failure_bucket": "sentiment_inversion",
+        "rate": 0.025,
+        "samples": 2
+      }
+    ],
+    "by_model": [
+      {
+        "entity_f1": 0.41500000000000004,
+        "entity_precision": 0.5041666666666667,
+        "entity_recall": 0.37083333333333335,
+        "exact_match_rate": 0.125,
+        "exact_matches": 5,
+        "intent_accuracy": 0.75,
+        "model_name": "gpt-4.1-nano",
+        "samples": 40,
+        "schema_failure_rate": 0.0,
+        "schema_failures": 0
+      },
+      {
+        "entity_f1": 0.2066666666666667,
+        "entity_precision": 0.5833333333333333,
+        "entity_recall": 0.2125,
+        "exact_match_rate": 0.05,
+        "exact_matches": 2,
+        "intent_accuracy": 0.475,
+        "model_name": "sarvam-30b",
+        "samples": 40,
+        "schema_failure_rate": 0.325,
+        "schema_failures": 13
+      }
+    ],
+    "by_model_prompt": [
+      {
+        "entity_f1": 0.36333333333333334,
+        "entity_precision": 0.4416666666666667,
+        "entity_recall": 0.325,
+        "exact_match_rate": 0.1,
+        "exact_matches": 2,
+        "intent_accuracy": 0.8,
+        "model_prompt": "gpt-4.1-nano__english",
+        "samples": 20,
+        "schema_failure_rate": 0.0,
+        "schema_failures": 0
+      },
+      {
+        "entity_f1": 0.4666666666666667,
+        "entity_precision": 0.5666666666666667,
+        "entity_recall": 0.4166666666666667,
+        "exact_match_rate": 0.15,
+        "exact_matches": 3,
+        "intent_accuracy": 0.7,
+        "model_prompt": "gpt-4.1-nano__hinglish",
+        "samples": 20,
+        "schema_failure_rate": 0.0,
+        "schema_failures": 0
+      },
+      {
+        "entity_f1": 0.2033333333333333,
+        "entity_precision": 0.6166666666666667,
+        "entity_recall": 0.2,
+        "exact_match_rate": 0.05,
+        "exact_matches": 1,
+        "intent_accuracy": 0.45,
+        "model_prompt": "sarvam-30b__english",
+        "samples": 20,
+        "schema_failure_rate": 0.35,
+        "schema_failures": 7
+      },
+      {
+        "entity_f1": 0.21000000000000002,
+        "entity_precision": 0.55,
+        "entity_recall": 0.225,
+        "exact_match_rate": 0.05,
+        "exact_matches": 1,
+        "intent_accuracy": 0.5,
+        "model_prompt": "sarvam-30b__hinglish",
+        "samples": 20,
+        "schema_failure_rate": 0.3,
+        "schema_failures": 6
+      }
+    ],
+    "by_prompt_language": [
+      {
+        "entity_f1": 0.2833333333333333,
+        "entity_precision": 0.5291666666666667,
+        "entity_recall": 0.2625,
+        "exact_match_rate": 0.075,
+        "exact_matches": 3,
+        "intent_accuracy": 0.625,
+        "prompt_language": "english",
+        "samples": 40,
+        "schema_failure_rate": 0.175,
+        "schema_failures": 7
+      },
+      {
+        "entity_f1": 0.3383333333333333,
+        "entity_precision": 0.5583333333333333,
+        "entity_recall": 0.32083333333333336,
+        "exact_match_rate": 0.1,
+        "exact_matches": 4,
+        "intent_accuracy": 0.6,
+        "prompt_language": "hinglish",
+        "samples": 40,
+        "schema_failure_rate": 0.15,
+        "schema_failures": 6
+      }
+    ],
+    "by_slice_tag": [
+      {
+        "entity_f1": 0.33194444444444443,
+        "entity_precision": 0.6666666666666666,
+        "entity_recall": 0.2847222222222222,
+        "exact_match_rate": 0.041666666666666664,
+        "exact_matches": 1,
+        "intent_accuracy": 0.5,
+        "samples": 24,
+        "schema_failure_rate": 0.25,
+        "schema_failures": 6,
+        "slice_tag": "adversarial"
+      },
+      {
+        "entity_f1": 0.22976190476190478,
+        "entity_precision": 0.5178571428571429,
+        "entity_recall": 0.20833333333333331,
+        "exact_match_rate": 0.07142857142857142,
+        "exact_matches": 2,
+        "intent_accuracy": 0.5714285714285714,
+        "samples": 28,
+        "schema_failure_rate": 0.25,
+        "schema_failures": 7,
+        "slice_tag": "ambiguity"
+      },
+      {
+        "entity_f1": 0.6033333333333333,
+        "entity_precision": 0.7333333333333333,
+        "entity_recall": 0.5916666666666667,
+        "exact_match_rate": 0.3,
+        "exact_matches": 6,
+        "intent_accuracy": 0.65,
+        "samples": 20,
+        "schema_failure_rate": 0.1,
+        "schema_failures": 2,
+        "slice_tag": "code_switching"
+      },
+      {
+        "entity_f1": 0.31083333333333335,
+        "entity_precision": 0.54375,
+        "entity_recall": 0.29166666666666663,
+        "exact_match_rate": 0.0875,
+        "exact_matches": 7,
+        "intent_accuracy": 0.6125,
+        "samples": 80,
+        "schema_failure_rate": 0.1625,
+        "schema_failures": 13,
+        "slice_tag": "prompt_language_hinglish"
+      },
+      {
+        "entity_f1": 0.30000000000000004,
+        "entity_precision": 0.875,
+        "entity_recall": 0.25,
+        "exact_match_rate": 0.0,
+        "exact_matches": 0,
+        "intent_accuracy": 0.5,
+        "samples": 4,
+        "schema_failure_rate": 0.5,
+        "schema_failures": 2,
+        "slice_tag": "sentiment_load"
+      },
+      {
+        "entity_f1": 0.0,
+        "entity_precision": 0.5,
+        "entity_recall": 0.0,
+        "exact_match_rate": 0.0,
+        "exact_matches": 0,
+        "intent_accuracy": 0.5,
+        "samples": 4,
+        "schema_failure_rate": 0.0,
+        "schema_failures": 0,
+        "slice_tag": "short_utterance"
+      },
+      {
+        "entity_f1": 0.34523809523809523,
+        "entity_precision": 0.5476190476190477,
+        "entity_recall": 0.33035714285714285,
+        "exact_match_rate": 0.10714285714285714,
+        "exact_matches": 6,
+        "intent_accuracy": 0.5892857142857143,
+        "samples": 56,
+        "schema_failure_rate": 0.16071428571428573,
+        "schema_failures": 9,
+        "slice_tag": "temporal_reference"
+      },
+      {
+        "entity_f1": 0.14666666666666667,
+        "entity_precision": 0.36666666666666664,
+        "entity_recall": 0.15,
+        "exact_match_rate": 0.0,
+        "exact_matches": 0,
+        "intent_accuracy": 0.65,
+        "samples": 20,
+        "schema_failure_rate": 0.1,
+        "schema_failures": 2,
+        "slice_tag": "transliteration_noise"
+      }
+    ],
+    "intent_confusion": [
+      {
+        "count": 3,
+        "gold_intent": "call_request",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "call_request",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "information_query",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "information_query",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "information_query",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "other",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "media_control",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "media_control",
+        "prompt_language": "english"
+      },
+      {
+        "count": 2,
+        "gold_intent": "meeting_schedule",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "meeting_schedule",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "meeting_schedule",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "reminder_cancel",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "meeting_schedule",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "reminder_create",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "message_send",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "message_send",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "navigation_request",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "navigation_request",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "note_create",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "note_create",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "purchase_request",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "purchase_request",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "reminder_cancel",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "reminder_cancel",
+        "prompt_language": "english"
+      },
+      {
+        "count": 2,
+        "gold_intent": "reminder_create",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "reminder_create",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "reminder_update",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "reminder_create",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "reminder_update",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "reminder_update",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "task_create",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "task_create",
+        "prompt_language": "english"
+      },
+      {
+        "count": 2,
+        "gold_intent": "call_request",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "call_request",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "call_request",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "reminder_create",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "information_query",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "information_query",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "information_query",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "reminder_cancel",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "media_control",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "media_control",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 2,
+        "gold_intent": "meeting_schedule",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "meeting_schedule",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "meeting_schedule",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "reminder_create",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "meeting_schedule",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "reminder_update",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "message_send",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "message_send",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "navigation_request",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "navigation_request",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "note_create",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "note_create",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "purchase_request",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "task_create",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "reminder_cancel",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "reminder_cancel",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 2,
+        "gold_intent": "reminder_create",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "reminder_create",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "reminder_update",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "reminder_create",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "reminder_update",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "reminder_update",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "task_create",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "task_create",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 2,
+        "gold_intent": "call_request",
+        "model_name": "sarvam-30b",
+        "predicted_intent": null,
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "call_request",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "call_request",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "information_query",
+        "model_name": "sarvam-30b",
+        "predicted_intent": null,
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "information_query",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "information_query",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "media_control",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "other",
+        "prompt_language": "english"
+      },
+      {
+        "count": 2,
+        "gold_intent": "meeting_schedule",
+        "model_name": "sarvam-30b",
+        "predicted_intent": null,
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "meeting_schedule",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "meeting_schedule",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "meeting_schedule",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "reminder_cancel",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "message_send",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "message_send",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "navigation_request",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "task_create",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "note_create",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "note_create",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "purchase_request",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "task_create",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "reminder_cancel",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "reminder_cancel",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "reminder_create",
+        "model_name": "sarvam-30b",
+        "predicted_intent": null,
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "reminder_create",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "reminder_create",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "reminder_update",
+        "model_name": "sarvam-30b",
+        "predicted_intent": null,
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "reminder_update",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "reminder_update",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "task_create",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "task_create",
+        "prompt_language": "english"
+      },
+      {
+        "count": 2,
+        "gold_intent": "call_request",
+        "model_name": "sarvam-30b",
+        "predicted_intent": null,
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "call_request",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "call_request",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "information_query",
+        "model_name": "sarvam-30b",
+        "predicted_intent": null,
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "information_query",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "information_query",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "media_control",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "other",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 3,
+        "gold_intent": "meeting_schedule",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "meeting_schedule",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "meeting_schedule",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "reminder_update",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "message_send",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "message_send",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "navigation_request",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "other",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "note_create",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "note_create",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "purchase_request",
+        "model_name": "sarvam-30b",
+        "predicted_intent": null,
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "reminder_cancel",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "reminder_cancel",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "reminder_create",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "reminder_cancel",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "reminder_create",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "reminder_create",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 2,
+        "gold_intent": "reminder_update",
+        "model_name": "sarvam-30b",
+        "predicted_intent": null,
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "task_create",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "task_create",
+        "prompt_language": "hinglish"
+      }
+    ]
+  },
+  "dataset_path": "data\\curated\\smoke_20.jsonl",
+  "issues": [],
+  "prediction_run_dir": "data\\predictions\\smoke_test_v2",
+  "run_id": "smoke_test_v2"
+}

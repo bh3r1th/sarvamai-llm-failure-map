@@ -1,0 +1,9 @@
+failure_bucket,samples,rate
+entity_drift,143,0.1986111111111111
+hallucination,351,0.4875
+intent_confusion,111,0.15416666666666667
+omission,558,0.775
+over_extraction,430,0.5972222222222222
+schema_failure,67,0.09305555555555556
+sentiment_inversion,29,0.04027777777777778
+temporal_inversion,43,0.059722222222222225

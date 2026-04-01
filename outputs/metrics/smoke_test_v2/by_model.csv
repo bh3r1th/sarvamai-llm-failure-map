@@ -1,0 +1,3 @@
+model_name,samples,intent_accuracy,entity_precision,entity_recall,entity_f1,exact_match_rate,schema_failure_rate,schema_failures,exact_matches
+gpt-4.1-nano,40,0.75,0.5041666666666667,0.37083333333333335,0.41500000000000004,0.125,0.0,0,5
+sarvam-30b,40,0.475,0.5833333333333333,0.2125,0.2066666666666667,0.05,0.325,13,2

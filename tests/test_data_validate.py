@@ -48,6 +48,31 @@ def test_dataset_validation_passes_on_good_examples() -> None:
     assert validate_records(records) == []
 
 
+def test_dataset_validation_allows_explicit_language_family_slice_tags() -> None:
+    records = [
+        _base_record(sample_id="s1").model_copy(
+            update={
+                "slice_tags": {
+                    SliceTag.CODE_SWITCHING,
+                    SliceTag.HINGLISH,
+                    SliceTag.PROMPT_LANGUAGE_HINGLISH,
+                }
+            }
+        ),
+        _base_record(sample_id="s2", text="amma ki meeting schedule chey").model_copy(
+            update={
+                "metadata_flags": MetadataFlags(),
+                "slice_tags": {
+                    SliceTag.TELUGU_ENGLISH,
+                    SliceTag.PROMPT_LANGUAGE_HINGLISH,
+                },
+            }
+        ),
+    ]
+
+    assert validate_records(records) == []
+
+
 def test_duplicate_sample_id_detection() -> None:
     records = [_base_record(sample_id="dup"), _base_record(sample_id="dup")]
 

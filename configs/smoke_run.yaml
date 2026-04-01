@@ -1,0 +1,21 @@
+{
+  "dataset_path": "data/curated/smoke_20.jsonl",
+  "models": [
+    "sarvam-30b",
+    "gpt-4.1-nano"
+  ],
+  "prompt_variants": [
+    {
+      "name": "baseline_v1",
+      "prompt_language": "hinglish"
+    },
+    {
+      "name": "english_v1",
+      "prompt_language": "english"
+    }
+  ],
+  "output_dir": "data/predictions",
+  "run_id": null,
+  "run_id_prefix": "smoke20",
+  "notes": "First controlled smoke run. Dataset is a fixed 20-sample subset derived from data/golden/golden_set_v1.jsonl to surface parse, prompt, and schema regressions before full experiments."
+}

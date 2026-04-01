@@ -1,0 +1,2018 @@
+{
+  "aggregate_tables": {
+    "boundary_failure_by_language_family": [
+      {
+        "boundary_failure_category": "exact_entities_only",
+        "language_family": "hinglish",
+        "rate": 0.005555555555555556,
+        "samples": 2
+      },
+      {
+        "boundary_failure_category": "exact_intent_only",
+        "language_family": "hinglish",
+        "rate": 0.40555555555555556,
+        "samples": 146
+      },
+      {
+        "boundary_failure_category": "full_exact_match",
+        "language_family": "hinglish",
+        "rate": 0.1111111111111111,
+        "samples": 40
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_drift",
+        "language_family": "hinglish",
+        "rate": 0.1111111111111111,
+        "samples": 40
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_extra",
+        "language_family": "hinglish",
+        "rate": 0.022222222222222223,
+        "samples": 8
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_missing",
+        "language_family": "hinglish",
+        "rate": 0.13055555555555556,
+        "samples": 47
+      },
+      {
+        "boundary_failure_category": "intent_wrong_entity_partially_correct",
+        "language_family": "hinglish",
+        "rate": 0.041666666666666664,
+        "samples": 15
+      },
+      {
+        "boundary_failure_category": "intent_wrong_no_entity_match",
+        "language_family": "hinglish",
+        "rate": 0.08611111111111111,
+        "samples": 31
+      },
+      {
+        "boundary_failure_category": "null_or_unparsed_prediction",
+        "language_family": "hinglish",
+        "rate": 0.08611111111111111,
+        "samples": 31
+      },
+      {
+        "boundary_failure_category": "exact_intent_only",
+        "language_family": "telugu_english",
+        "rate": 0.3888888888888889,
+        "samples": 140
+      },
+      {
+        "boundary_failure_category": "full_exact_match",
+        "language_family": "telugu_english",
+        "rate": 0.1,
+        "samples": 36
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_drift",
+        "language_family": "telugu_english",
+        "rate": 0.07222222222222222,
+        "samples": 26
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_extra",
+        "language_family": "telugu_english",
+        "rate": 0.022222222222222223,
+        "samples": 8
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_missing",
+        "language_family": "telugu_english",
+        "rate": 0.14166666666666666,
+        "samples": 51
+      },
+      {
+        "boundary_failure_category": "intent_wrong_entity_partially_correct",
+        "language_family": "telugu_english",
+        "rate": 0.03888888888888889,
+        "samples": 14
+      },
+      {
+        "boundary_failure_category": "intent_wrong_no_entity_match",
+        "language_family": "telugu_english",
+        "rate": 0.1361111111111111,
+        "samples": 49
+      },
+      {
+        "boundary_failure_category": "null_or_unparsed_prediction",
+        "language_family": "telugu_english",
+        "rate": 0.1,
+        "samples": 36
+      }
+    ],
+    "boundary_failure_by_model": [
+      {
+        "boundary_failure_category": "exact_intent_only",
+        "model_name": "gpt-4.1-nano",
+        "rate": 0.46944444444444444,
+        "samples": 169
+      },
+      {
+        "boundary_failure_category": "full_exact_match",
+        "model_name": "gpt-4.1-nano",
+        "rate": 0.1527777777777778,
+        "samples": 55
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_drift",
+        "model_name": "gpt-4.1-nano",
+        "rate": 0.06111111111111111,
+        "samples": 22
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_extra",
+        "model_name": "gpt-4.1-nano",
+        "rate": 0.002777777777777778,
+        "samples": 1
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_missing",
+        "model_name": "gpt-4.1-nano",
+        "rate": 0.21666666666666667,
+        "samples": 78
+      },
+      {
+        "boundary_failure_category": "intent_wrong_entity_partially_correct",
+        "model_name": "gpt-4.1-nano",
+        "rate": 0.027777777777777776,
+        "samples": 10
+      },
+      {
+        "boundary_failure_category": "intent_wrong_no_entity_match",
+        "model_name": "gpt-4.1-nano",
+        "rate": 0.06944444444444445,
+        "samples": 25
+      },
+      {
+        "boundary_failure_category": "exact_entities_only",
+        "model_name": "sarvam-30b",
+        "rate": 0.005555555555555556,
+        "samples": 2
+      },
+      {
+        "boundary_failure_category": "exact_intent_only",
+        "model_name": "sarvam-30b",
+        "rate": 0.325,
+        "samples": 117
+      },
+      {
+        "boundary_failure_category": "full_exact_match",
+        "model_name": "sarvam-30b",
+        "rate": 0.058333333333333334,
+        "samples": 21
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_drift",
+        "model_name": "sarvam-30b",
+        "rate": 0.12222222222222222,
+        "samples": 44
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_extra",
+        "model_name": "sarvam-30b",
+        "rate": 0.041666666666666664,
+        "samples": 15
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_missing",
+        "model_name": "sarvam-30b",
+        "rate": 0.05555555555555555,
+        "samples": 20
+      },
+      {
+        "boundary_failure_category": "intent_wrong_entity_partially_correct",
+        "model_name": "sarvam-30b",
+        "rate": 0.05277777777777778,
+        "samples": 19
+      },
+      {
+        "boundary_failure_category": "intent_wrong_no_entity_match",
+        "model_name": "sarvam-30b",
+        "rate": 0.1527777777777778,
+        "samples": 55
+      },
+      {
+        "boundary_failure_category": "null_or_unparsed_prediction",
+        "model_name": "sarvam-30b",
+        "rate": 0.18611111111111112,
+        "samples": 67
+      }
+    ],
+    "boundary_failure_by_model_prompt": [
+      {
+        "boundary_failure_category": "exact_intent_only",
+        "model_prompt": "gpt-4.1-nano__english",
+        "rate": 0.4777777777777778,
+        "samples": 86
+      },
+      {
+        "boundary_failure_category": "full_exact_match",
+        "model_prompt": "gpt-4.1-nano__english",
+        "rate": 0.15,
+        "samples": 27
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_drift",
+        "model_prompt": "gpt-4.1-nano__english",
+        "rate": 0.05,
+        "samples": 9
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_missing",
+        "model_prompt": "gpt-4.1-nano__english",
+        "rate": 0.23333333333333334,
+        "samples": 42
+      },
+      {
+        "boundary_failure_category": "intent_wrong_entity_partially_correct",
+        "model_prompt": "gpt-4.1-nano__english",
+        "rate": 0.027777777777777776,
+        "samples": 5
+      },
+      {
+        "boundary_failure_category": "intent_wrong_no_entity_match",
+        "model_prompt": "gpt-4.1-nano__english",
+        "rate": 0.06111111111111111,
+        "samples": 11
+      },
+      {
+        "boundary_failure_category": "exact_intent_only",
+        "model_prompt": "gpt-4.1-nano__hinglish",
+        "rate": 0.46111111111111114,
+        "samples": 83
+      },
+      {
+        "boundary_failure_category": "full_exact_match",
+        "model_prompt": "gpt-4.1-nano__hinglish",
+        "rate": 0.15555555555555556,
+        "samples": 28
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_drift",
+        "model_prompt": "gpt-4.1-nano__hinglish",
+        "rate": 0.07222222222222222,
+        "samples": 13
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_extra",
+        "model_prompt": "gpt-4.1-nano__hinglish",
+        "rate": 0.005555555555555556,
+        "samples": 1
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_missing",
+        "model_prompt": "gpt-4.1-nano__hinglish",
+        "rate": 0.2,
+        "samples": 36
+      },
+      {
+        "boundary_failure_category": "intent_wrong_entity_partially_correct",
+        "model_prompt": "gpt-4.1-nano__hinglish",
+        "rate": 0.027777777777777776,
+        "samples": 5
+      },
+      {
+        "boundary_failure_category": "intent_wrong_no_entity_match",
+        "model_prompt": "gpt-4.1-nano__hinglish",
+        "rate": 0.07777777777777778,
+        "samples": 14
+      },
+      {
+        "boundary_failure_category": "exact_entities_only",
+        "model_prompt": "sarvam-30b__english",
+        "rate": 0.011111111111111112,
+        "samples": 2
+      },
+      {
+        "boundary_failure_category": "exact_intent_only",
+        "model_prompt": "sarvam-30b__english",
+        "rate": 0.31666666666666665,
+        "samples": 57
+      },
+      {
+        "boundary_failure_category": "full_exact_match",
+        "model_prompt": "sarvam-30b__english",
+        "rate": 0.05555555555555555,
+        "samples": 10
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_drift",
+        "model_prompt": "sarvam-30b__english",
+        "rate": 0.11666666666666667,
+        "samples": 21
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_extra",
+        "model_prompt": "sarvam-30b__english",
+        "rate": 0.044444444444444446,
+        "samples": 8
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_missing",
+        "model_prompt": "sarvam-30b__english",
+        "rate": 0.06666666666666667,
+        "samples": 12
+      },
+      {
+        "boundary_failure_category": "intent_wrong_entity_partially_correct",
+        "model_prompt": "sarvam-30b__english",
+        "rate": 0.05,
+        "samples": 9
+      },
+      {
+        "boundary_failure_category": "intent_wrong_no_entity_match",
+        "model_prompt": "sarvam-30b__english",
+        "rate": 0.15555555555555556,
+        "samples": 28
+      },
+      {
+        "boundary_failure_category": "null_or_unparsed_prediction",
+        "model_prompt": "sarvam-30b__english",
+        "rate": 0.18333333333333332,
+        "samples": 33
+      },
+      {
+        "boundary_failure_category": "exact_intent_only",
+        "model_prompt": "sarvam-30b__hinglish",
+        "rate": 0.3333333333333333,
+        "samples": 60
+      },
+      {
+        "boundary_failure_category": "full_exact_match",
+        "model_prompt": "sarvam-30b__hinglish",
+        "rate": 0.06111111111111111,
+        "samples": 11
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_drift",
+        "model_prompt": "sarvam-30b__hinglish",
+        "rate": 0.12777777777777777,
+        "samples": 23
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_extra",
+        "model_prompt": "sarvam-30b__hinglish",
+        "rate": 0.03888888888888889,
+        "samples": 7
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_missing",
+        "model_prompt": "sarvam-30b__hinglish",
+        "rate": 0.044444444444444446,
+        "samples": 8
+      },
+      {
+        "boundary_failure_category": "intent_wrong_entity_partially_correct",
+        "model_prompt": "sarvam-30b__hinglish",
+        "rate": 0.05555555555555555,
+        "samples": 10
+      },
+      {
+        "boundary_failure_category": "intent_wrong_no_entity_match",
+        "model_prompt": "sarvam-30b__hinglish",
+        "rate": 0.15,
+        "samples": 27
+      },
+      {
+        "boundary_failure_category": "null_or_unparsed_prediction",
+        "model_prompt": "sarvam-30b__hinglish",
+        "rate": 0.18888888888888888,
+        "samples": 34
+      }
+    ],
+    "boundary_failure_by_slice_tag": [
+      {
+        "boundary_failure_category": "exact_intent_only",
+        "rate": 0.34375,
+        "samples": 55,
+        "slice_tag": "adversarial"
+      },
+      {
+        "boundary_failure_category": "full_exact_match",
+        "rate": 0.18125,
+        "samples": 29,
+        "slice_tag": "adversarial"
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_drift",
+        "rate": 0.0625,
+        "samples": 10,
+        "slice_tag": "adversarial"
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_extra",
+        "rate": 0.05625,
+        "samples": 9,
+        "slice_tag": "adversarial"
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_missing",
+        "rate": 0.1625,
+        "samples": 26,
+        "slice_tag": "adversarial"
+      },
+      {
+        "boundary_failure_category": "intent_wrong_entity_partially_correct",
+        "rate": 0.01875,
+        "samples": 3,
+        "slice_tag": "adversarial"
+      },
+      {
+        "boundary_failure_category": "intent_wrong_no_entity_match",
+        "rate": 0.09375,
+        "samples": 15,
+        "slice_tag": "adversarial"
+      },
+      {
+        "boundary_failure_category": "null_or_unparsed_prediction",
+        "rate": 0.08125,
+        "samples": 13,
+        "slice_tag": "adversarial"
+      },
+      {
+        "boundary_failure_category": "exact_entities_only",
+        "rate": 0.005952380952380952,
+        "samples": 1,
+        "slice_tag": "ambiguity"
+      },
+      {
+        "boundary_failure_category": "exact_intent_only",
+        "rate": 0.48214285714285715,
+        "samples": 81,
+        "slice_tag": "ambiguity"
+      },
+      {
+        "boundary_failure_category": "full_exact_match",
+        "rate": 0.017857142857142856,
+        "samples": 3,
+        "slice_tag": "ambiguity"
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_drift",
+        "rate": 0.05357142857142857,
+        "samples": 9,
+        "slice_tag": "ambiguity"
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_extra",
+        "rate": 0.011904761904761904,
+        "samples": 2,
+        "slice_tag": "ambiguity"
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_missing",
+        "rate": 0.11904761904761904,
+        "samples": 20,
+        "slice_tag": "ambiguity"
+      },
+      {
+        "boundary_failure_category": "intent_wrong_entity_partially_correct",
+        "rate": 0.047619047619047616,
+        "samples": 8,
+        "slice_tag": "ambiguity"
+      },
+      {
+        "boundary_failure_category": "intent_wrong_no_entity_match",
+        "rate": 0.11904761904761904,
+        "samples": 20,
+        "slice_tag": "ambiguity"
+      },
+      {
+        "boundary_failure_category": "null_or_unparsed_prediction",
+        "rate": 0.14285714285714285,
+        "samples": 24,
+        "slice_tag": "ambiguity"
+      },
+      {
+        "boundary_failure_category": "exact_entities_only",
+        "rate": 0.002777777777777778,
+        "samples": 2,
+        "slice_tag": "code_switching"
+      },
+      {
+        "boundary_failure_category": "exact_intent_only",
+        "rate": 0.3972222222222222,
+        "samples": 286,
+        "slice_tag": "code_switching"
+      },
+      {
+        "boundary_failure_category": "full_exact_match",
+        "rate": 0.10555555555555556,
+        "samples": 76,
+        "slice_tag": "code_switching"
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_drift",
+        "rate": 0.09166666666666666,
+        "samples": 66,
+        "slice_tag": "code_switching"
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_extra",
+        "rate": 0.022222222222222223,
+        "samples": 16,
+        "slice_tag": "code_switching"
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_missing",
+        "rate": 0.1361111111111111,
+        "samples": 98,
+        "slice_tag": "code_switching"
+      },
+      {
+        "boundary_failure_category": "intent_wrong_entity_partially_correct",
+        "rate": 0.04027777777777778,
+        "samples": 29,
+        "slice_tag": "code_switching"
+      },
+      {
+        "boundary_failure_category": "intent_wrong_no_entity_match",
+        "rate": 0.1111111111111111,
+        "samples": 80,
+        "slice_tag": "code_switching"
+      },
+      {
+        "boundary_failure_category": "null_or_unparsed_prediction",
+        "rate": 0.09305555555555556,
+        "samples": 67,
+        "slice_tag": "code_switching"
+      },
+      {
+        "boundary_failure_category": "exact_intent_only",
+        "rate": 0.23214285714285715,
+        "samples": 13,
+        "slice_tag": "long_context"
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_drift",
+        "rate": 0.30357142857142855,
+        "samples": 17,
+        "slice_tag": "long_context"
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_missing",
+        "rate": 0.19642857142857142,
+        "samples": 11,
+        "slice_tag": "long_context"
+      },
+      {
+        "boundary_failure_category": "intent_wrong_entity_partially_correct",
+        "rate": 0.05357142857142857,
+        "samples": 3,
+        "slice_tag": "long_context"
+      },
+      {
+        "boundary_failure_category": "intent_wrong_no_entity_match",
+        "rate": 0.03571428571428571,
+        "samples": 2,
+        "slice_tag": "long_context"
+      },
+      {
+        "boundary_failure_category": "null_or_unparsed_prediction",
+        "rate": 0.17857142857142858,
+        "samples": 10,
+        "slice_tag": "long_context"
+      },
+      {
+        "boundary_failure_category": "exact_entities_only",
+        "rate": 0.002777777777777778,
+        "samples": 2,
+        "slice_tag": "prompt_language_hinglish"
+      },
+      {
+        "boundary_failure_category": "exact_intent_only",
+        "rate": 0.3972222222222222,
+        "samples": 286,
+        "slice_tag": "prompt_language_hinglish"
+      },
+      {
+        "boundary_failure_category": "full_exact_match",
+        "rate": 0.10555555555555556,
+        "samples": 76,
+        "slice_tag": "prompt_language_hinglish"
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_drift",
+        "rate": 0.09166666666666666,
+        "samples": 66,
+        "slice_tag": "prompt_language_hinglish"
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_extra",
+        "rate": 0.022222222222222223,
+        "samples": 16,
+        "slice_tag": "prompt_language_hinglish"
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_missing",
+        "rate": 0.1361111111111111,
+        "samples": 98,
+        "slice_tag": "prompt_language_hinglish"
+      },
+      {
+        "boundary_failure_category": "intent_wrong_entity_partially_correct",
+        "rate": 0.04027777777777778,
+        "samples": 29,
+        "slice_tag": "prompt_language_hinglish"
+      },
+      {
+        "boundary_failure_category": "intent_wrong_no_entity_match",
+        "rate": 0.1111111111111111,
+        "samples": 80,
+        "slice_tag": "prompt_language_hinglish"
+      },
+      {
+        "boundary_failure_category": "null_or_unparsed_prediction",
+        "rate": 0.09305555555555556,
+        "samples": 67,
+        "slice_tag": "prompt_language_hinglish"
+      },
+      {
+        "boundary_failure_category": "exact_intent_only",
+        "rate": 0.0625,
+        "samples": 2,
+        "slice_tag": "sentiment_load"
+      },
+      {
+        "boundary_failure_category": "full_exact_match",
+        "rate": 0.0625,
+        "samples": 2,
+        "slice_tag": "sentiment_load"
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_drift",
+        "rate": 0.1875,
+        "samples": 6,
+        "slice_tag": "sentiment_load"
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_missing",
+        "rate": 0.46875,
+        "samples": 15,
+        "slice_tag": "sentiment_load"
+      },
+      {
+        "boundary_failure_category": "intent_wrong_no_entity_match",
+        "rate": 0.1875,
+        "samples": 6,
+        "slice_tag": "sentiment_load"
+      },
+      {
+        "boundary_failure_category": "null_or_unparsed_prediction",
+        "rate": 0.03125,
+        "samples": 1,
+        "slice_tag": "sentiment_load"
+      },
+      {
+        "boundary_failure_category": "exact_intent_only",
+        "rate": 0.4166666666666667,
+        "samples": 10,
+        "slice_tag": "short_utterance"
+      },
+      {
+        "boundary_failure_category": "full_exact_match",
+        "rate": 0.08333333333333333,
+        "samples": 2,
+        "slice_tag": "short_utterance"
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_drift",
+        "rate": 0.041666666666666664,
+        "samples": 1,
+        "slice_tag": "short_utterance"
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_missing",
+        "rate": 0.041666666666666664,
+        "samples": 1,
+        "slice_tag": "short_utterance"
+      },
+      {
+        "boundary_failure_category": "intent_wrong_no_entity_match",
+        "rate": 0.4166666666666667,
+        "samples": 10,
+        "slice_tag": "short_utterance"
+      },
+      {
+        "boundary_failure_category": "exact_entities_only",
+        "rate": 0.0058823529411764705,
+        "samples": 2,
+        "slice_tag": "temporal_reference"
+      },
+      {
+        "boundary_failure_category": "exact_intent_only",
+        "rate": 0.4176470588235294,
+        "samples": 142,
+        "slice_tag": "temporal_reference"
+      },
+      {
+        "boundary_failure_category": "full_exact_match",
+        "rate": 0.041176470588235294,
+        "samples": 14,
+        "slice_tag": "temporal_reference"
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_drift",
+        "rate": 0.1323529411764706,
+        "samples": 45,
+        "slice_tag": "temporal_reference"
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_extra",
+        "rate": 0.014705882352941176,
+        "samples": 5,
+        "slice_tag": "temporal_reference"
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_missing",
+        "rate": 0.1264705882352941,
+        "samples": 43,
+        "slice_tag": "temporal_reference"
+      },
+      {
+        "boundary_failure_category": "intent_wrong_entity_partially_correct",
+        "rate": 0.07058823529411765,
+        "samples": 24,
+        "slice_tag": "temporal_reference"
+      },
+      {
+        "boundary_failure_category": "intent_wrong_no_entity_match",
+        "rate": 0.07941176470588235,
+        "samples": 27,
+        "slice_tag": "temporal_reference"
+      },
+      {
+        "boundary_failure_category": "null_or_unparsed_prediction",
+        "rate": 0.11176470588235295,
+        "samples": 38,
+        "slice_tag": "temporal_reference"
+      },
+      {
+        "boundary_failure_category": "exact_entities_only",
+        "rate": 0.00625,
+        "samples": 1,
+        "slice_tag": "transliteration_noise"
+      },
+      {
+        "boundary_failure_category": "exact_intent_only",
+        "rate": 0.46875,
+        "samples": 75,
+        "slice_tag": "transliteration_noise"
+      },
+      {
+        "boundary_failure_category": "full_exact_match",
+        "rate": 0.06875,
+        "samples": 11,
+        "slice_tag": "transliteration_noise"
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_drift",
+        "rate": 0.075,
+        "samples": 12,
+        "slice_tag": "transliteration_noise"
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_extra",
+        "rate": 0.00625,
+        "samples": 1,
+        "slice_tag": "transliteration_noise"
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_missing",
+        "rate": 0.10625,
+        "samples": 17,
+        "slice_tag": "transliteration_noise"
+      },
+      {
+        "boundary_failure_category": "intent_wrong_entity_partially_correct",
+        "rate": 0.04375,
+        "samples": 7,
+        "slice_tag": "transliteration_noise"
+      },
+      {
+        "boundary_failure_category": "intent_wrong_no_entity_match",
+        "rate": 0.1625,
+        "samples": 26,
+        "slice_tag": "transliteration_noise"
+      },
+      {
+        "boundary_failure_category": "null_or_unparsed_prediction",
+        "rate": 0.0625,
+        "samples": 10,
+        "slice_tag": "transliteration_noise"
+      }
+    ],
+    "boundary_failure_summary": [
+      {
+        "boundary_failure_category": "exact_entities_only",
+        "rate": 0.002777777777777778,
+        "samples": 2
+      },
+      {
+        "boundary_failure_category": "exact_intent_only",
+        "rate": 0.3972222222222222,
+        "samples": 286
+      },
+      {
+        "boundary_failure_category": "full_exact_match",
+        "rate": 0.10555555555555556,
+        "samples": 76
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_drift",
+        "rate": 0.09166666666666666,
+        "samples": 66
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_extra",
+        "rate": 0.022222222222222223,
+        "samples": 16
+      },
+      {
+        "boundary_failure_category": "intent_correct_entity_missing",
+        "rate": 0.1361111111111111,
+        "samples": 98
+      },
+      {
+        "boundary_failure_category": "intent_wrong_entity_partially_correct",
+        "rate": 0.04027777777777778,
+        "samples": 29
+      },
+      {
+        "boundary_failure_category": "intent_wrong_no_entity_match",
+        "rate": 0.1111111111111111,
+        "samples": 80
+      },
+      {
+        "boundary_failure_category": "null_or_unparsed_prediction",
+        "rate": 0.09305555555555556,
+        "samples": 67
+      }
+    ],
+    "by_failure_bucket": [
+      {
+        "failure_bucket": "entity_drift",
+        "rate": 0.1986111111111111,
+        "samples": 143
+      },
+      {
+        "failure_bucket": "hallucination",
+        "rate": 0.4875,
+        "samples": 351
+      },
+      {
+        "failure_bucket": "intent_confusion",
+        "rate": 0.15416666666666667,
+        "samples": 111
+      },
+      {
+        "failure_bucket": "omission",
+        "rate": 0.775,
+        "samples": 558
+      },
+      {
+        "failure_bucket": "over_extraction",
+        "rate": 0.5972222222222222,
+        "samples": 430
+      },
+      {
+        "failure_bucket": "schema_failure",
+        "rate": 0.09305555555555556,
+        "samples": 67
+      },
+      {
+        "failure_bucket": "sentiment_inversion",
+        "rate": 0.04027777777777778,
+        "samples": 29
+      },
+      {
+        "failure_bucket": "temporal_inversion",
+        "rate": 0.059722222222222225,
+        "samples": 43
+      }
+    ],
+    "by_language_family": [
+      {
+        "entity_f1": 0.281007696007696,
+        "entity_precision": 0.44572089947089943,
+        "entity_recall": 0.2686574074074074,
+        "exact_match_rate": 0.1111111111111111,
+        "exact_matches": 40,
+        "intent_accuracy": 0.7805555555555556,
+        "language_family": "hinglish",
+        "samples": 360,
+        "schema_failure_rate": 0.08611111111111111,
+        "schema_failures": 31
+      },
+      {
+        "entity_f1": 0.2517526455026455,
+        "entity_precision": 0.4949074074074074,
+        "entity_recall": 0.23375,
+        "exact_match_rate": 0.1,
+        "exact_matches": 36,
+        "intent_accuracy": 0.725,
+        "language_family": "telugu_english",
+        "samples": 360,
+        "schema_failure_rate": 0.1,
+        "schema_failures": 36
+      }
+    ],
+    "by_model": [
+      {
+        "entity_f1": 0.33347462722462723,
+        "entity_precision": 0.4272486772486772,
+        "entity_recall": 0.29435185185185186,
+        "exact_match_rate": 0.1527777777777778,
+        "exact_matches": 55,
+        "intent_accuracy": 0.9027777777777778,
+        "model_name": "gpt-4.1-nano",
+        "samples": 360,
+        "schema_failure_rate": 0.0,
+        "schema_failures": 0
+      },
+      {
+        "entity_f1": 0.1992857142857143,
+        "entity_precision": 0.5133796296296296,
+        "entity_recall": 0.20805555555555558,
+        "exact_match_rate": 0.058333333333333334,
+        "exact_matches": 21,
+        "intent_accuracy": 0.6027777777777777,
+        "model_name": "sarvam-30b",
+        "samples": 360,
+        "schema_failure_rate": 0.18611111111111112,
+        "schema_failures": 67
+      }
+    ],
+    "by_model_prompt": [
+      {
+        "entity_f1": 0.32982804232804236,
+        "entity_precision": 0.43366402116402114,
+        "entity_recall": 0.28648148148148145,
+        "exact_match_rate": 0.15,
+        "exact_matches": 27,
+        "intent_accuracy": 0.9111111111111111,
+        "model_prompt": "gpt-4.1-nano__english",
+        "samples": 180,
+        "schema_failure_rate": 0.0,
+        "schema_failures": 0
+      },
+      {
+        "entity_f1": 0.3371212121212121,
+        "entity_precision": 0.42083333333333334,
+        "entity_recall": 0.3022222222222222,
+        "exact_match_rate": 0.15555555555555556,
+        "exact_matches": 28,
+        "intent_accuracy": 0.8944444444444445,
+        "model_prompt": "gpt-4.1-nano__hinglish",
+        "samples": 180,
+        "schema_failure_rate": 0.0,
+        "schema_failures": 0
+      },
+      {
+        "entity_f1": 0.2035714285714286,
+        "entity_precision": 0.5265740740740741,
+        "entity_recall": 0.21361111111111114,
+        "exact_match_rate": 0.05555555555555555,
+        "exact_matches": 10,
+        "intent_accuracy": 0.6,
+        "model_prompt": "sarvam-30b__english",
+        "samples": 180,
+        "schema_failure_rate": 0.18333333333333332,
+        "schema_failures": 33
+      },
+      {
+        "entity_f1": 0.195,
+        "entity_precision": 0.5001851851851852,
+        "entity_recall": 0.2025,
+        "exact_match_rate": 0.06111111111111111,
+        "exact_matches": 11,
+        "intent_accuracy": 0.6055555555555555,
+        "model_prompt": "sarvam-30b__hinglish",
+        "samples": 180,
+        "schema_failure_rate": 0.18888888888888888,
+        "schema_failures": 34
+      }
+    ],
+    "by_prompt_language": [
+      {
+        "entity_f1": 0.26669973544973546,
+        "entity_precision": 0.48011904761904767,
+        "entity_recall": 0.25004629629629627,
+        "exact_match_rate": 0.10277777777777777,
+        "exact_matches": 37,
+        "intent_accuracy": 0.7555555555555555,
+        "prompt_language": "english",
+        "samples": 360,
+        "schema_failure_rate": 0.09166666666666666,
+        "schema_failures": 33
+      },
+      {
+        "entity_f1": 0.26606060606060605,
+        "entity_precision": 0.46050925925925923,
+        "entity_recall": 0.2523611111111111,
+        "exact_match_rate": 0.10833333333333334,
+        "exact_matches": 39,
+        "intent_accuracy": 0.75,
+        "prompt_language": "hinglish",
+        "samples": 360,
+        "schema_failure_rate": 0.09444444444444444,
+        "schema_failures": 34
+      }
+    ],
+    "by_slice_tag": [
+      {
+        "entity_f1": 0.35875,
+        "entity_precision": 0.5302083333333333,
+        "entity_recall": 0.35104166666666664,
+        "exact_match_rate": 0.18125,
+        "exact_matches": 29,
+        "intent_accuracy": 0.80625,
+        "samples": 160,
+        "schema_failure_rate": 0.08125,
+        "schema_failures": 13,
+        "slice_tag": "adversarial"
+      },
+      {
+        "entity_f1": 0.15082199546485262,
+        "entity_precision": 0.3799603174603175,
+        "entity_recall": 0.13194444444444445,
+        "exact_match_rate": 0.017857142857142856,
+        "exact_matches": 3,
+        "intent_accuracy": 0.6845238095238095,
+        "samples": 168,
+        "schema_failure_rate": 0.14285714285714285,
+        "schema_failures": 24,
+        "slice_tag": "ambiguity"
+      },
+      {
+        "entity_f1": 0.26638017075517073,
+        "entity_precision": 0.4703141534391534,
+        "entity_recall": 0.2512037037037037,
+        "exact_match_rate": 0.10555555555555556,
+        "exact_matches": 76,
+        "intent_accuracy": 0.7527777777777778,
+        "samples": 720,
+        "schema_failure_rate": 0.09305555555555556,
+        "schema_failures": 67,
+        "slice_tag": "code_switching"
+      },
+      {
+        "entity_f1": 0.23594233147804577,
+        "entity_precision": 0.5439200680272108,
+        "entity_recall": 0.19404761904761905,
+        "exact_match_rate": 0.0,
+        "exact_matches": 0,
+        "intent_accuracy": 0.7321428571428571,
+        "samples": 56,
+        "schema_failure_rate": 0.17857142857142858,
+        "schema_failures": 10,
+        "slice_tag": "long_context"
+      },
+      {
+        "entity_f1": 0.26638017075517073,
+        "entity_precision": 0.4703141534391534,
+        "entity_recall": 0.2512037037037037,
+        "exact_match_rate": 0.10555555555555556,
+        "exact_matches": 76,
+        "intent_accuracy": 0.7527777777777778,
+        "samples": 720,
+        "schema_failure_rate": 0.09305555555555556,
+        "schema_failures": 67,
+        "slice_tag": "prompt_language_hinglish"
+      },
+      {
+        "entity_f1": 0.3938988095238095,
+        "entity_precision": 0.8385416666666666,
+        "entity_recall": 0.3125,
+        "exact_match_rate": 0.0625,
+        "exact_matches": 2,
+        "intent_accuracy": 0.78125,
+        "samples": 32,
+        "schema_failure_rate": 0.03125,
+        "schema_failures": 1,
+        "slice_tag": "sentiment_load"
+      },
+      {
+        "entity_f1": 0.13194444444444445,
+        "entity_precision": 0.3958333333333333,
+        "entity_recall": 0.125,
+        "exact_match_rate": 0.08333333333333333,
+        "exact_matches": 2,
+        "intent_accuracy": 0.5833333333333334,
+        "samples": 24,
+        "schema_failure_rate": 0.0,
+        "schema_failures": 0,
+        "slice_tag": "short_utterance"
+      },
+      {
+        "entity_f1": 0.22733447924624395,
+        "entity_precision": 0.411155462184874,
+        "entity_recall": 0.21088235294117647,
+        "exact_match_rate": 0.041176470588235294,
+        "exact_matches": 14,
+        "intent_accuracy": 0.7323529411764705,
+        "samples": 340,
+        "schema_failure_rate": 0.11176470588235295,
+        "schema_failures": 38,
+        "slice_tag": "temporal_reference"
+      },
+      {
+        "entity_f1": 0.20669642857142856,
+        "entity_precision": 0.4395833333333333,
+        "entity_recall": 0.19375,
+        "exact_match_rate": 0.06875,
+        "exact_matches": 11,
+        "intent_accuracy": 0.725,
+        "samples": 160,
+        "schema_failure_rate": 0.0625,
+        "schema_failures": 10,
+        "slice_tag": "transliteration_noise"
+      }
+    ],
+    "intent_confusion": [
+      {
+        "count": 16,
+        "gold_intent": "call_request",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "call_request",
+        "prompt_language": "english"
+      },
+      {
+        "count": 12,
+        "gold_intent": "information_query",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "information_query",
+        "prompt_language": "english"
+      },
+      {
+        "count": 18,
+        "gold_intent": "media_control",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "media_control",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "meeting_schedule",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "media_control",
+        "prompt_language": "english"
+      },
+      {
+        "count": 12,
+        "gold_intent": "meeting_schedule",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "meeting_schedule",
+        "prompt_language": "english"
+      },
+      {
+        "count": 2,
+        "gold_intent": "meeting_schedule",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "reminder_create",
+        "prompt_language": "english"
+      },
+      {
+        "count": 3,
+        "gold_intent": "meeting_schedule",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "reminder_update",
+        "prompt_language": "english"
+      },
+      {
+        "count": 22,
+        "gold_intent": "message_send",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "message_send",
+        "prompt_language": "english"
+      },
+      {
+        "count": 15,
+        "gold_intent": "navigation_request",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "navigation_request",
+        "prompt_language": "english"
+      },
+      {
+        "count": 2,
+        "gold_intent": "navigation_request",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "purchase_request",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "navigation_request",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "task_create",
+        "prompt_language": "english"
+      },
+      {
+        "count": 12,
+        "gold_intent": "note_create",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "note_create",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "note_create",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "reminder_create",
+        "prompt_language": "english"
+      },
+      {
+        "count": 2,
+        "gold_intent": "other",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "information_query",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "purchase_request",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "message_send",
+        "prompt_language": "english"
+      },
+      {
+        "count": 11,
+        "gold_intent": "purchase_request",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "purchase_request",
+        "prompt_language": "english"
+      },
+      {
+        "count": 10,
+        "gold_intent": "reminder_cancel",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "reminder_cancel",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "reminder_create",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "purchase_request",
+        "prompt_language": "english"
+      },
+      {
+        "count": 14,
+        "gold_intent": "reminder_create",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "reminder_create",
+        "prompt_language": "english"
+      },
+      {
+        "count": 2,
+        "gold_intent": "reminder_update",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "reminder_create",
+        "prompt_language": "english"
+      },
+      {
+        "count": 6,
+        "gold_intent": "reminder_update",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "reminder_update",
+        "prompt_language": "english"
+      },
+      {
+        "count": 16,
+        "gold_intent": "task_create",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "task_create",
+        "prompt_language": "english"
+      },
+      {
+        "count": 16,
+        "gold_intent": "call_request",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "call_request",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 12,
+        "gold_intent": "information_query",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "information_query",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 18,
+        "gold_intent": "media_control",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "media_control",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 10,
+        "gold_intent": "meeting_schedule",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "meeting_schedule",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 3,
+        "gold_intent": "meeting_schedule",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "reminder_create",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 5,
+        "gold_intent": "meeting_schedule",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "reminder_update",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 22,
+        "gold_intent": "message_send",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "message_send",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 15,
+        "gold_intent": "navigation_request",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "navigation_request",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 2,
+        "gold_intent": "navigation_request",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "purchase_request",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "navigation_request",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "task_create",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 13,
+        "gold_intent": "note_create",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "note_create",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 2,
+        "gold_intent": "other",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "information_query",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "purchase_request",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "other",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 11,
+        "gold_intent": "purchase_request",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "purchase_request",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 10,
+        "gold_intent": "reminder_cancel",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "reminder_cancel",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "reminder_create",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "information_query",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 14,
+        "gold_intent": "reminder_create",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "reminder_create",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 4,
+        "gold_intent": "reminder_update",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "reminder_create",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 4,
+        "gold_intent": "reminder_update",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "reminder_update",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 16,
+        "gold_intent": "task_create",
+        "model_name": "gpt-4.1-nano",
+        "predicted_intent": "task_create",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "call_request",
+        "model_name": "sarvam-30b",
+        "predicted_intent": null,
+        "prompt_language": "english"
+      },
+      {
+        "count": 11,
+        "gold_intent": "call_request",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "call_request",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "call_request",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "message_send",
+        "prompt_language": "english"
+      },
+      {
+        "count": 3,
+        "gold_intent": "call_request",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "other",
+        "prompt_language": "english"
+      },
+      {
+        "count": 2,
+        "gold_intent": "information_query",
+        "model_name": "sarvam-30b",
+        "predicted_intent": null,
+        "prompt_language": "english"
+      },
+      {
+        "count": 8,
+        "gold_intent": "information_query",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "information_query",
+        "prompt_language": "english"
+      },
+      {
+        "count": 2,
+        "gold_intent": "information_query",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "other",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "media_control",
+        "model_name": "sarvam-30b",
+        "predicted_intent": null,
+        "prompt_language": "english"
+      },
+      {
+        "count": 11,
+        "gold_intent": "media_control",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "media_control",
+        "prompt_language": "english"
+      },
+      {
+        "count": 6,
+        "gold_intent": "media_control",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "other",
+        "prompt_language": "english"
+      },
+      {
+        "count": 5,
+        "gold_intent": "meeting_schedule",
+        "model_name": "sarvam-30b",
+        "predicted_intent": null,
+        "prompt_language": "english"
+      },
+      {
+        "count": 8,
+        "gold_intent": "meeting_schedule",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "meeting_schedule",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "meeting_schedule",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "reminder_create",
+        "prompt_language": "english"
+      },
+      {
+        "count": 3,
+        "gold_intent": "meeting_schedule",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "reminder_update",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "meeting_schedule",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "task_create",
+        "prompt_language": "english"
+      },
+      {
+        "count": 5,
+        "gold_intent": "message_send",
+        "model_name": "sarvam-30b",
+        "predicted_intent": null,
+        "prompt_language": "english"
+      },
+      {
+        "count": 13,
+        "gold_intent": "message_send",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "message_send",
+        "prompt_language": "english"
+      },
+      {
+        "count": 4,
+        "gold_intent": "message_send",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "other",
+        "prompt_language": "english"
+      },
+      {
+        "count": 6,
+        "gold_intent": "navigation_request",
+        "model_name": "sarvam-30b",
+        "predicted_intent": null,
+        "prompt_language": "english"
+      },
+      {
+        "count": 11,
+        "gold_intent": "navigation_request",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "navigation_request",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "navigation_request",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "reminder_create",
+        "prompt_language": "english"
+      },
+      {
+        "count": 4,
+        "gold_intent": "note_create",
+        "model_name": "sarvam-30b",
+        "predicted_intent": null,
+        "prompt_language": "english"
+      },
+      {
+        "count": 7,
+        "gold_intent": "note_create",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "note_create",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "note_create",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "other",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "note_create",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "reminder_create",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "other",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "information_query",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "other",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "other",
+        "prompt_language": "english"
+      },
+      {
+        "count": 2,
+        "gold_intent": "purchase_request",
+        "model_name": "sarvam-30b",
+        "predicted_intent": null,
+        "prompt_language": "english"
+      },
+      {
+        "count": 6,
+        "gold_intent": "purchase_request",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "other",
+        "prompt_language": "english"
+      },
+      {
+        "count": 3,
+        "gold_intent": "purchase_request",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "purchase_request",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "purchase_request",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "reminder_create",
+        "prompt_language": "english"
+      },
+      {
+        "count": 2,
+        "gold_intent": "reminder_cancel",
+        "model_name": "sarvam-30b",
+        "predicted_intent": null,
+        "prompt_language": "english"
+      },
+      {
+        "count": 8,
+        "gold_intent": "reminder_cancel",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "reminder_cancel",
+        "prompt_language": "english"
+      },
+      {
+        "count": 3,
+        "gold_intent": "reminder_create",
+        "model_name": "sarvam-30b",
+        "predicted_intent": null,
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "reminder_create",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "information_query",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "reminder_create",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "other",
+        "prompt_language": "english"
+      },
+      {
+        "count": 10,
+        "gold_intent": "reminder_create",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "reminder_create",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "reminder_update",
+        "model_name": "sarvam-30b",
+        "predicted_intent": null,
+        "prompt_language": "english"
+      },
+      {
+        "count": 5,
+        "gold_intent": "reminder_update",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "reminder_create",
+        "prompt_language": "english"
+      },
+      {
+        "count": 2,
+        "gold_intent": "reminder_update",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "reminder_update",
+        "prompt_language": "english"
+      },
+      {
+        "count": 1,
+        "gold_intent": "task_create",
+        "model_name": "sarvam-30b",
+        "predicted_intent": null,
+        "prompt_language": "english"
+      },
+      {
+        "count": 15,
+        "gold_intent": "task_create",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "task_create",
+        "prompt_language": "english"
+      },
+      {
+        "count": 3,
+        "gold_intent": "call_request",
+        "model_name": "sarvam-30b",
+        "predicted_intent": null,
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 9,
+        "gold_intent": "call_request",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "call_request",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 2,
+        "gold_intent": "call_request",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "other",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "call_request",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "reminder_cancel",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "call_request",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "reminder_create",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 10,
+        "gold_intent": "information_query",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "information_query",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 2,
+        "gold_intent": "information_query",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "other",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 14,
+        "gold_intent": "media_control",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "media_control",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 4,
+        "gold_intent": "media_control",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "other",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 5,
+        "gold_intent": "meeting_schedule",
+        "model_name": "sarvam-30b",
+        "predicted_intent": null,
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 8,
+        "gold_intent": "meeting_schedule",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "meeting_schedule",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "meeting_schedule",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "other",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 2,
+        "gold_intent": "meeting_schedule",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "reminder_update",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 2,
+        "gold_intent": "meeting_schedule",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "task_create",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 2,
+        "gold_intent": "message_send",
+        "model_name": "sarvam-30b",
+        "predicted_intent": null,
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 14,
+        "gold_intent": "message_send",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "message_send",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 6,
+        "gold_intent": "message_send",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "other",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 5,
+        "gold_intent": "navigation_request",
+        "model_name": "sarvam-30b",
+        "predicted_intent": null,
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "navigation_request",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "information_query",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 9,
+        "gold_intent": "navigation_request",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "navigation_request",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 2,
+        "gold_intent": "navigation_request",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "other",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "navigation_request",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "reminder_create",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 6,
+        "gold_intent": "note_create",
+        "model_name": "sarvam-30b",
+        "predicted_intent": null,
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 7,
+        "gold_intent": "note_create",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "note_create",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 2,
+        "gold_intent": "other",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "other",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 3,
+        "gold_intent": "purchase_request",
+        "model_name": "sarvam-30b",
+        "predicted_intent": null,
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "purchase_request",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "information_query",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 3,
+        "gold_intent": "purchase_request",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "other",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 4,
+        "gold_intent": "purchase_request",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "purchase_request",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "purchase_request",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "reminder_create",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 2,
+        "gold_intent": "reminder_cancel",
+        "model_name": "sarvam-30b",
+        "predicted_intent": null,
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 8,
+        "gold_intent": "reminder_cancel",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "reminder_cancel",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 5,
+        "gold_intent": "reminder_create",
+        "model_name": "sarvam-30b",
+        "predicted_intent": null,
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "reminder_create",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "information_query",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "reminder_create",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "other",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 8,
+        "gold_intent": "reminder_create",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "reminder_create",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 1,
+        "gold_intent": "reminder_update",
+        "model_name": "sarvam-30b",
+        "predicted_intent": null,
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 5,
+        "gold_intent": "reminder_update",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "reminder_create",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 2,
+        "gold_intent": "reminder_update",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "reminder_update",
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 2,
+        "gold_intent": "task_create",
+        "model_name": "sarvam-30b",
+        "predicted_intent": null,
+        "prompt_language": "hinglish"
+      },
+      {
+        "count": 14,
+        "gold_intent": "task_create",
+        "model_name": "sarvam-30b",
+        "predicted_intent": "task_create",
+        "prompt_language": "hinglish"
+      }
+    ]
+  },
+  "dataset_path": "data\\curated\\curated_dataset_v2.jsonl",
+  "issues": [],
+  "prediction_run_dir": "data\\predictions\\full_v3",
+  "run_id": "full_v3"
+}

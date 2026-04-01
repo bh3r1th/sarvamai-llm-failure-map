@@ -1,0 +1,85 @@
+{
+  "config_path": "configs\\full_run.yaml",
+  "dataset_path": "data\\curated\\curated_dataset_v2.jsonl",
+  "dataset_summary": {
+    "adversarial": 40,
+    "ambiguous": 40,
+    "clear": 58,
+    "conflicting_or_multi_clause": 0,
+    "intent_distribution": {
+      "call_request": 16,
+      "information_query": 12,
+      "media_control": 18,
+      "meeting_schedule": 18,
+      "message_send": 22,
+      "navigation_request": 18,
+      "note_create": 13,
+      "other": 2,
+      "purchase_request": 12,
+      "reminder_cancel": 10,
+      "reminder_create": 15,
+      "reminder_update": 8,
+      "task_create": 16
+    },
+    "noisy": 40,
+    "slice_distribution": {
+      "adversarial": 40,
+      "ambiguity": 42,
+      "code_switching": 180,
+      "long_context": 14,
+      "prompt_language_hinglish": 180,
+      "sentiment_load": 8,
+      "short_utterance": 6,
+      "temporal_reference": 85,
+      "transliteration_noise": 40
+    },
+    "total_samples": 180
+  },
+  "models": [
+    "sarvam-30b",
+    "gpt-4.1-nano"
+  ],
+  "notes": "First controlled smoke run. Dataset is a fixed 20-sample subset derived from data/curated/curated_dataset_v2.jsonl to surface parse, prompt, and schema regressions before full experiments.",
+  "output_dir": "data\\predictions\\full_v3",
+  "prediction_files": [
+    {
+      "model_name": "sarvam-30b",
+      "path": "data\\predictions\\full_v3\\sarvam_30b__hinglish.jsonl",
+      "prompt_language": "hinglish",
+      "prompt_variant": "baseline_v1",
+      "rows_written": 180
+    },
+    {
+      "model_name": "sarvam-30b",
+      "path": "data\\predictions\\full_v3\\sarvam_30b__english.jsonl",
+      "prompt_language": "english",
+      "prompt_variant": "english_v1",
+      "rows_written": 180
+    },
+    {
+      "model_name": "gpt-4.1-nano",
+      "path": "data\\predictions\\full_v3\\gpt_4_1_nano__hinglish.jsonl",
+      "prompt_language": "hinglish",
+      "prompt_variant": "baseline_v1",
+      "rows_written": 180
+    },
+    {
+      "model_name": "gpt-4.1-nano",
+      "path": "data\\predictions\\full_v3\\gpt_4_1_nano__english.jsonl",
+      "prompt_language": "english",
+      "prompt_variant": "english_v1",
+      "rows_written": 180
+    }
+  ],
+  "prompt_variants": [
+    {
+      "name": "baseline_v1",
+      "prompt_language": "hinglish"
+    },
+    {
+      "name": "english_v1",
+      "prompt_language": "english"
+    }
+  ],
+  "run_id": "full_v3"
+}

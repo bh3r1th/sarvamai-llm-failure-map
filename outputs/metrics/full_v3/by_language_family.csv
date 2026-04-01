@@ -1,0 +1,3 @@
+language_family,samples,intent_accuracy,entity_precision,entity_recall,entity_f1,exact_match_rate,schema_failure_rate,schema_failures,exact_matches
+hinglish,360,0.7805555555555556,0.44572089947089943,0.2686574074074074,0.281007696007696,0.1111111111111111,0.08611111111111111,31,40
+telugu_english,360,0.725,0.4949074074074074,0.23375,0.2517526455026455,0.1,0.1,36,36

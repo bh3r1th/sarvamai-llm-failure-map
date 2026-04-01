@@ -1,0 +1,17 @@
+model_name,boundary_failure_category,samples,rate
+gpt-4.1-nano,exact_intent_only,169,0.46944444444444444
+gpt-4.1-nano,full_exact_match,55,0.1527777777777778
+gpt-4.1-nano,intent_correct_entity_drift,22,0.06111111111111111
+gpt-4.1-nano,intent_correct_entity_extra,1,0.002777777777777778
+gpt-4.1-nano,intent_correct_entity_missing,78,0.21666666666666667
+gpt-4.1-nano,intent_wrong_entity_partially_correct,10,0.027777777777777776
+gpt-4.1-nano,intent_wrong_no_entity_match,25,0.06944444444444445
+sarvam-30b,exact_entities_only,2,0.005555555555555556
+sarvam-30b,exact_intent_only,117,0.325
+sarvam-30b,full_exact_match,21,0.058333333333333334
+sarvam-30b,intent_correct_entity_drift,44,0.12222222222222222
+sarvam-30b,intent_correct_entity_extra,15,0.041666666666666664
+sarvam-30b,intent_correct_entity_missing,20,0.05555555555555555
+sarvam-30b,intent_wrong_entity_partially_correct,19,0.05277777777777778
+sarvam-30b,intent_wrong_no_entity_match,55,0.1527777777777778
+sarvam-30b,null_or_unparsed_prediction,67,0.18611111111111112

@@ -62,10 +62,21 @@ def test_valid_intent_and_entity_creation() -> None:
 
     evaluation = EvaluationResult(
         sample_id="s1",
-        intent_exact_match=True,
-        entities_exact_match=True,
-        overall_exact_match=True,
-        failure_categories=set(),
+        model_name="demo-model",
+        prompt_language=PromptLanguage.HINGLISH,
+        gold_intent="call_request",
+        predicted_intent="call_request",
+        intent_correct=True,
+        entity_gold_count=0,
+        entity_predicted_count=0,
+        entity_true_positives=0,
+        entity_false_positives=0,
+        entity_false_negatives=0,
+        entity_precision=1.0,
+        entity_recall=1.0,
+        entity_f1=1.0,
+        schema_failure=False,
+        assigned_failure_buckets=set(),
     )
 
     cfg = ExperimentConfig.from_repo_root(
@@ -134,15 +145,26 @@ def test_parse_success_schema_failure_consistency() -> None:
 def test_failure_category_parsing() -> None:
     result = EvaluationResult(
         sample_id="s3",
-        intent_exact_match=False,
-        entities_exact_match=False,
-        overall_exact_match=False,
-        failure_categories=["schema_failure", FailureCategory.ENTITY_DRIFT, "omission"],
+        model_name="demo-model",
+        prompt_language=PromptLanguage.ENGLISH,
+        gold_intent="call_request",
+        predicted_intent="message_send",
+        intent_correct=False,
+        entity_gold_count=1,
+        entity_predicted_count=2,
+        entity_true_positives=0,
+        entity_false_positives=2,
+        entity_false_negatives=1,
+        entity_precision=0.0,
+        entity_recall=0.0,
+        entity_f1=0.0,
+        schema_failure=False,
+        assigned_failure_buckets=["schema_failure", FailureCategory.ENTITY_DRIFT, "omission"],
     )
 
-    assert FailureCategory.SCHEMA_FAILURE in result.failure_categories
-    assert FailureCategory.ENTITY_DRIFT in result.failure_categories
-    assert FailureCategory.OMISSION in result.failure_categories
+    assert FailureCategory.SCHEMA_FAILURE in result.assigned_failure_buckets
+    assert FailureCategory.ENTITY_DRIFT in result.assigned_failure_buckets
+    assert FailureCategory.OMISSION in result.assigned_failure_buckets
 
 
 def test_optional_span_and_normalized_values() -> None:

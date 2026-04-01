@@ -1,0 +1,83 @@
+{
+  "config_path": "configs\\smoke_run.yaml",
+  "dataset_path": "data\\curated\\smoke_20.jsonl",
+  "dataset_summary": {
+    "adversarial": 6,
+    "ambiguous": 7,
+    "clear": 5,
+    "conflicting_or_multi_clause": 3,
+    "intent_distribution": {
+      "call_request": 3,
+      "information_query": 2,
+      "media_control": 1,
+      "meeting_schedule": 4,
+      "message_send": 1,
+      "navigation_request": 1,
+      "note_create": 1,
+      "purchase_request": 1,
+      "reminder_cancel": 1,
+      "reminder_create": 2,
+      "reminder_update": 2,
+      "task_create": 1
+    },
+    "noisy": 5,
+    "slice_distribution": {
+      "adversarial": 6,
+      "ambiguity": 7,
+      "code_switching": 5,
+      "prompt_language_hinglish": 20,
+      "sentiment_load": 1,
+      "short_utterance": 1,
+      "temporal_reference": 14,
+      "transliteration_noise": 5
+    },
+    "total_samples": 20
+  },
+  "models": [
+    "sarvam-30b",
+    "gpt-4o-mini"
+  ],
+  "notes": "First controlled smoke run. Dataset is a fixed 20-sample subset derived from data/golden/golden_set_v1.jsonl to surface parse, prompt, and schema regressions before full experiments.",
+  "output_dir": "data\\predictions\\smoke_test",
+  "prediction_files": [
+    {
+      "model_name": "sarvam-30b",
+      "path": "data\\predictions\\smoke_test\\sarvam_30b__hinglish.jsonl",
+      "prompt_language": "hinglish",
+      "prompt_variant": "baseline_v1",
+      "rows_written": 20
+    },
+    {
+      "model_name": "sarvam-30b",
+      "path": "data\\predictions\\smoke_test\\sarvam_30b__english.jsonl",
+      "prompt_language": "english",
+      "prompt_variant": "english_v1",
+      "rows_written": 20
+    },
+    {
+      "model_name": "gpt-4o-mini",
+      "path": "data\\predictions\\smoke_test\\gpt_4o_mini__hinglish.jsonl",
+      "prompt_language": "hinglish",
+      "prompt_variant": "baseline_v1",
+      "rows_written": 20
+    },
+    {
+      "model_name": "gpt-4o-mini",
+      "path": "data\\predictions\\smoke_test\\gpt_4o_mini__english.jsonl",
+      "prompt_language": "english",
+      "prompt_variant": "english_v1",
+      "rows_written": 20
+    }
+  ],
+  "prompt_variants": [
+    {
+      "name": "baseline_v1",
+      "prompt_language": "hinglish"
+    },
+    {
+      "name": "english_v1",
+      "prompt_language": "english"
+    }
+  ],
+  "run_id": "smoke_test"
+}

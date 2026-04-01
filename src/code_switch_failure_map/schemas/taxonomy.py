@@ -55,6 +55,8 @@ class SliceTag(str, Enum):
     """Supported analysis slice tags for this experiment."""
 
     CODE_SWITCHING = "code_switching"
+    HINGLISH = "hinglish"
+    TELUGU_ENGLISH = "telugu_english"
     TRANSLITERATION_NOISE = "transliteration_noise"
     AMBIGUITY = "ambiguity"
     TEMPORAL_REFERENCE = "temporal_reference"
